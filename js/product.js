@@ -29,7 +29,7 @@
   * @param {string} id
   */
  function getProductById(id) {
-   fetch(`http://localhost:3000/api/products/` + id)
+   fetch(`${apiUrl}/api/products/` + id)
      .then((res) => res.json())
      .then((data) => {
        makeProductCard(

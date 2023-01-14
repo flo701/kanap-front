@@ -3,7 +3,7 @@
  * With the data, create card for each item :
  */
  function getAllProducts() {
-  fetch("http://localhost:3000/api/products")
+  fetch(`${apiUrl}/api/products`)
     .then((res) => res.json())
     .then((res) => {
       for (const item of res) {

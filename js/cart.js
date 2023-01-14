@@ -17,7 +17,7 @@ if (basket === null || basket.length <= 0 || localStorage.length < 1) {
  * Send request to API to get product data :
  */
 for (let item of basket) {
-  fetch(`http://localhost:3000/api/products/${item.id}`)
+  fetch(`${apiUrl}/api/products/${item.id}`)
     .then((res) => res.json())
     .then((data) => {
       displayProductOfBasket(item, data);
@@ -566,7 +566,7 @@ buttonOrder.addEventListener("click", (event) => {
     // Send contact and products to server,
     // get orderId,
     // and redirect to confirmation page :
-    fetch("http://localhost:3000/api/products/order", {
+    fetch(`${apiUrl}/api/products/order`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
