@@ -51,7 +51,7 @@ function errorMessage(errorMessage) {
  */
 function makeCard(id, image, alt, name, description) {
   const newLink = document.createElement("a");
-  newLink.setAttribute("href", `./product.html?id=${id}`);
+  newLink.setAttribute("href", `./html/product.html?id=${id}`);
 
   const newItem = document.getElementById("items");
   newItem.appendChild(newLink);
